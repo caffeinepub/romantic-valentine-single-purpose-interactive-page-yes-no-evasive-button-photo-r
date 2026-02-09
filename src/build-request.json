@@ -1,0 +1,111 @@
+{
+  "kind": "build_request",
+  "title": "Romantic Valentine single-purpose interactive page (Yes/No evasive button + photo reveal)",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a single-page romantic Valentine experience that asks: \"Will you be my Valentine, Tamanna?\" with exactly two visible options: \"Yes\" and \"No\".",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create an interactive web page as a surprise for my girlfriend... ask her to be my Valentine Tamanna.\nThere should be two options: Yes or No."
+        ]
+      },
+      "acceptanceCriteria": [
+        "The main view contains the question text \"Will you be my Valentine, Tamanna?\".",
+        "Two buttons are visible: \"Yes\" and \"No\".",
+        "The page has no additional primary flows or navigation beyond this interaction."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement the evasive \"No\" button behavior: when the user hovers over or points at \"No\", it moves to a different position so it is difficult/impossible to click.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "When she hovers her cursor over No, it should move away so she cannot click it, forcing her to click only on Yes."
+        ]
+      },
+      "acceptanceCriteria": [
+        "On desktop/laptop, when the pointer enters or hovers the \"No\" button, the button relocates within the visible card/container bounds.",
+        "On touch devices (iPad), when the user attempts to tap the \"No\" button (e.g., touchstart/pointerdown), the button relocates before a click can be registered.",
+        "The \"No\" button never triggers a success state or image reveal."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Implement the \"Yes\" click behavior: on clicking \"Yes\", replace the prompt/buttons with a success view that displays the provided photo and the message \"Good choice\".",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "When she clicks Yes, show her a the image i paste here telling her \"Good choice"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Clicking \"Yes\" transitions to a success view/state without reloading the page.",
+        "The success view shows the text \"Good choice\" exactly.",
+        "The success view displays one of the user-provided uploaded images (Tamanna.jpeg or Tamanna-1.jpeg) at a reasonable size for iPad screens."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Apply a consistent romantic theme using a pink-and-white color scheme, with cohesive typography, spacing, and subtle romantic UI accents (e.g., hearts, soft gradients, gentle animations) while keeping the page simple and single-purpose.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "The page should be simple, romantic-themed... The page should be themed romantically with a pink and white color scheme"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Primary background and UI surfaces use a pink/white palette (no dominant unrelated color scheme).",
+        "The UI looks coherent (consistent button styles, fonts, spacing).",
+        "Animations (if any) are subtle and do not interfere with the Yes/No interaction."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Ensure the page works smoothly on iPad Chrome: responsive layout, large tap targets, and interaction handling that does not depend solely on mouse hover.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "be fully interactive using HTML, CSS, and JavaScript so that I can easily run it on my iPad using Chrome."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Layout adapts to common iPad viewport sizes without overflowing or requiring horizontal scroll.",
+        "Buttons meet comfortable tap target sizing (at least ~44px height) and are easy to interact with.",
+        "The evasive behavior functions via pointer/touch events on iPad (not only CSS :hover)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend must be implemented in the existing React + TypeScript + Tailwind stack (no standalone plain HTML file requirement), while still delivering an HTML/CSS/JS-like single-page experience in the browser.",
+    "Do not edit files under frontend/src/components/ui or any other immutable paths listed in SYSTEM_CONTEXT; compose those components instead if needed.",
+    "No third-party auth or external services are required/used."
+  ],
+  "nonGoals": [
+    "Adding user accounts/authentication.",
+    "Storing responses or analytics in the backend.",
+    "Multi-page navigation, chat, or any additional features beyond the Valentine prompt and success reveal."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

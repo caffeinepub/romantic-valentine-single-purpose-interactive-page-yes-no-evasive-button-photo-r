@@ -1,0 +1,7 @@
+{
+  "frontend/src/App.tsx": "Main app component that renders the ValentineExperience as a centered, full-screen layout.",
+  "frontend/src/components/ValentineExperience.tsx": "Core Valentine component managing state between the question prompt (with Yes/No buttons) and the success view (showing \"Good choice\" message and Tamanna's photo).",
+  "frontend/src/components/EvasiveNoButton.tsx": "Interactive \"No\" button that repositions itself on hover, pointer down, and touch events to prevent clicking, with smooth animations and safe boundary constraints.",
+  "frontend/src/index.css": "Global styles with romantic pink/white OKLCH color theme, gradient backgrounds, custom animations, and romantic-themed utility classes.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with romantic color palette, custom border radius, enhanced shadows, and Inter font family."
+}

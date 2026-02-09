@@ -1,0 +1,122 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Romantic Valentine single-purpose interactive page (Yes/No evasive button + photo reveal)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Build a single-purpose Valentine prompt view with the exact question text and exactly two visible options (Yes/No).",
+      "acceptanceCriteria": [
+        "The main view contains the question text \"Will you be my Valentine, Tamanna?\".",
+        "Two buttons are visible: \"Yes\" and \"No\".",
+        "The page has no additional primary flows or navigation beyond this interaction."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the single-page Valentine experience container and render the prompt state with the exact question text and exactly two visible buttons (Yes/No), with no additional navigation or flows."
+        },
+        {
+          "path": "frontend/src/components/ValentineExperience.tsx",
+          "operation": "create",
+          "description": "Create a dedicated ValentineExperience component to encapsulate the prompt state and success state logic, keeping the app single-purpose and easy to reason about."
+        },
+        {
+          "path": "frontend/src/main.tsx",
+          "operation": "modify",
+          "description": "Ensure App renders the single-purpose Valentine experience as the only primary UI (no routing/navigation introduced)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Make the \"No\" button evasive on hover/pointer and touch so it relocates within bounds and never triggers success.",
+      "acceptanceCriteria": [
+        "On desktop/laptop, when the pointer enters or hovers the \"No\" button, the button relocates within the visible card/container bounds.",
+        "On touch devices (iPad), when the user attempts to tap the \"No\" button (e.g., touchstart/pointerdown), the button relocates before a click can be registered.",
+        "The \"No\" button never triggers a success state or image reveal."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/EvasiveNoButton.tsx",
+          "operation": "create",
+          "description": "Implement an EvasiveNoButton that repositions itself to a randomized safe location within a provided container on pointer enter/move and pointer down/touch start, and does not expose any success-triggering handler."
+        },
+        {
+          "path": "frontend/src/components/ValentineExperience.tsx",
+          "operation": "modify",
+          "description": "Wire EvasiveNoButton into the prompt view with a relatively-positioned container/card, pass refs/bounds needed for safe repositioning, and ensure the \"No\" action never transitions to success."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "On \"Yes\" click, transition in-place to a success view showing the message \"Good choice\" and a provided photo at iPad-friendly sizing.",
+      "acceptanceCriteria": [
+        "Clicking \"Yes\" transitions to a success view/state without reloading the page.",
+        "The success view shows the text \"Good choice\" exactly.",
+        "The success view displays one of the user-provided uploaded images (Tamanna.jpeg or Tamanna-1.jpeg) at a reasonable size for iPad screens."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/Tamanna.jpeg",
+          "operation": "create",
+          "description": "Add the user-provided photo asset Tamanna.jpeg to the frontend public assets so it can be displayed in the success view."
+        },
+        {
+          "path": "frontend/public/assets/Tamanna-1.jpeg",
+          "operation": "create",
+          "description": "Add the user-provided photo asset Tamanna-1.jpeg to the frontend public assets so it can be displayed in the success view."
+        },
+        {
+          "path": "frontend/src/components/ValentineExperience.tsx",
+          "operation": "modify",
+          "description": "Implement the \"Yes\" click state transition (no page reload) to a success view that renders the exact text \"Good choice\" and displays one of the provided images with responsive, iPad-friendly sizing and aspect handling."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Apply a simple, coherent romantic theme (pink/white palette, typography consistency, subtle heart/romantic accents and gentle animations).",
+      "acceptanceCriteria": [
+        "Primary background and UI surfaces use a pink/white palette (no dominant unrelated color scheme).",
+        "The UI looks coherent (consistent button styles, fonts, spacing).",
+        "Animations (if any) are subtle and do not interfere with the Yes/No interaction."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Define global base styles and a pink/white romantic theme using Tailwind layers (background treatment, typographic defaults, and subtle animation utilities) while keeping visuals simple and cohesive."
+        },
+        {
+          "path": "frontend/src/components/ValentineExperience.tsx",
+          "operation": "modify",
+          "description": "Apply consistent Tailwind styling for romantic UI surfaces (card/container), typography, spacing, and subtle accents (e.g., small hearts/gradients) without adding extra flows."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Ensure iPad Chrome compatibility with responsive layout, large tap targets, and pointer/touch-based evasive interaction (not hover-only).",
+      "acceptanceCriteria": [
+        "Layout adapts to common iPad viewport sizes without overflowing or requiring horizontal scroll.",
+        "Buttons meet comfortable tap target sizing (at least ~44px height) and are easy to interact with.",
+        "The evasive behavior functions via pointer/touch events on iPad (not only CSS :hover)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ValentineExperience.tsx",
+          "operation": "modify",
+          "description": "Ensure responsive layout constraints (centered container, safe padding, no horizontal overflow) and minimum tap target sizing for both buttons; validate that the prompt/success views fit iPad viewports."
+        },
+        {
+          "path": "frontend/src/components/EvasiveNoButton.tsx",
+          "operation": "modify",
+          "description": "Harden iPad interaction handling by using pointer/touch events (e.g., pointerdown/touchstart) to relocate before click registration; avoid hover-only logic and ensure repositioning stays within visible bounds."
+        }
+      ]
+    }
+  ]
+}

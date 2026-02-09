@@ -1,0 +1,100 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-single-page-romantic-valentine-experience-that-asks-will-you-be-my-valentine-tamanna-with-exactly-two-visible-options-yes-and-no",
+      "featureTitle": "Create a single-page romantic Valentine experience that asks: \"Will you be my Valentine, Tamanna?\" with exactly two visible options: \"Yes\" and \"No\".",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/ValentineExperience.tsx",
+        "frontend/src/main.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-evasive-no-button-behavior-when-the-user-hovers-over-or-points-at-no-it-moves-to-a-different-position-so-it-is-difficult-impossible-to-click",
+      "featureTitle": "Implement the evasive \"No\" button behavior: when the user hovers over or points at \"No\", it moves to a different position so it is difficult/impossible to click.",
+      "files": [
+        "frontend/src/components/EvasiveNoButton.tsx",
+        "frontend/src/components/ValentineExperience.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-yes-click-behavior-on-clicking-yes-replace-the-prompt-buttons-with-a-success-view-that-displays-the-provided-photo-and-the-message-good-choice",
+      "featureTitle": "Implement the \"Yes\" click behavior: on clicking \"Yes\", replace the prompt/buttons with a success view that displays the provided photo and the message \"Good choice\".",
+      "files": [
+        "frontend/src/components/ValentineExperience.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-consistent-romantic-theme-using-a-pink-and-white-color-scheme-with-cohesive-typography-spacing-and-subtle-romantic-ui-accents-e-g-hearts-soft-gradients-gentle-animations-while-keeping-the-page-simple-and-single-purpose",
+      "featureTitle": "Apply a consistent romantic theme using a pink-and-white color scheme, with cohesive typography, spacing, and subtle romantic UI accents (e.g., hearts, soft gradients, gentle animations) while keeping the page simple and single-purpose.",
+      "files": [
+        "frontend/src/components/ValentineExperience.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-ensure-the-page-works-smoothly-on-ipad-chrome-responsive-layout-large-tap-targets-and-interaction-handling-that-does-not-depend-solely-on-mouse-hover",
+      "featureTitle": "Ensure the page works smoothly on iPad Chrome: responsive layout, large tap targets, and interaction handling that does not depend solely on mouse hover.",
+      "files": [
+        "frontend/src/components/EvasiveNoButton.tsx",
+        "frontend/src/components/ValentineExperience.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

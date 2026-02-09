@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build a simple romantic interactive Valentine web page (HTML/CSS/JS) asking Tamanna to be Valentine, with Yes/No buttons where No evades hover and Yes shows a pasted image and message, optimized to run on iPad Chrome.",
+  "architectural_notes": [
+    "Implement as a standalone static HTML file with embedded CSS and JavaScript for easy local use on iPad Chrome."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-single-page-romantic-valentine-experience-that-asks-will-you-be-my-valentine-tamanna-with-exactly-two-visible-options-yes-and-no",
+      "title": "Create a single-page romantic Valentine experience that asks: \"Will you be my Valentine, Tamanna?\" with exactly two visible options: \"Yes\" and \"No\".",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-evasive-no-button-behavior-when-the-user-hovers-over-or-points-at-no-it-moves-to-a-different-position-so-it-is-difficult-impossible-to-click",
+      "title": "Implement the evasive \"No\" button behavior: when the user hovers over or points at \"No\", it moves to a different position so it is difficult/impossible to click.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-yes-click-behavior-on-clicking-yes-replace-the-prompt-buttons-with-a-success-view-that-displays-the-provided-photo-and-the-message-good-choice",
+      "title": "Implement the \"Yes\" click behavior: on clicking \"Yes\", replace the prompt/buttons with a success view that displays the provided photo and the message \"Good choice\".",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-consistent-romantic-theme-using-a-pink-and-white-color-scheme-with-cohesive-typography-spacing-and-subtle-romantic-ui-accents-e-g-hearts-soft-gradients-gentle-animations-while-keeping-the-page-simple-and-single-purpose",
+      "title": "Apply a consistent romantic theme using a pink-and-white color scheme, with cohesive typography, spacing, and subtle romantic UI accents (e.g., hearts, soft gradients, gentle animations) while keeping the page simple and single-purpose.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-page-works-smoothly-on-ipad-chrome-responsive-layout-large-tap-targets-and-interaction-handling-that-does-not-depend-solely-on-mouse-hover",
+      "title": "Ensure the page works smoothly on iPad Chrome: responsive layout, large tap targets, and interaction handling that does not depend solely on mouse hover.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a single-purpose romantic Valentine page asking Tamanna to be the user's Valentine, using a pink/white theme.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add Yes/No options where the No button moves away on hover to prevent clicking.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "On Yes click, display the user-provided pasted image and show a 'Good choice' message.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Ensure the page is fully interactive and easy to run locally on iPad using Chrome (HTML/CSS/JS).",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Romantic Valentine single-purpose interactive page (Yes/No evasive button + photo reveal)",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

@@ -1,0 +1,16 @@
+{
+  "backend/main.mo": "Empty actor canister definition.",
+  "feature_evidence.json": "Feature evidence report mapping features to files, components, and test IDs.",
+  "frontend-file-summaries.txt": "Plain-text summaries of key frontend files for reference.",
+  "frontend/index.css": "Tailwind base styles and custom CSS variables defining a romantic color theme.",
+  "frontend/index.html": "HTML entry point loading the React app into the root div.",
+  "frontend/src/App.tsx": "Wraps and centers the ValentineExperience component in a full-screen layout.",
+  "frontend/src/components/EvasiveNoButton.tsx": "Button component that repositions itself on interaction to avoid being clicked.",
+  "frontend/src/components/ValentineExperience.tsx": "Main Valentine flow managing Yes/No prompt and success state with themed UI.",
+  "frontend/src/hooks/useActor.ts": "React hook that creates and updates a backend actor based on identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Internet Identity context and hooks for authentication, identity loading, and login handling.",
+  "frontend/src/index.css": "Defines Tailwind layers plus custom OKLCH romantic theme variables, light/dark modes, global styles, and utility animations and color classes.",
+  "frontend/src/main.tsx": "Bootstraps the React app with React Query and Internet Identity provider and loads global styles.",
+  "frontend/tailwind.config.js": "Configures Tailwind theme extensions, romantic color palette, animations, and plugins for typography, container queries, and animations.",
+  "project_state.json": "Stores project metadata, feature requirements, and state for the romantic Valentine interactive page."
+}
